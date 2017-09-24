@@ -9,14 +9,14 @@ int main() {
 
 	string myidentity(string s);
 	string reverseString(string s);
+	bool isPalindrome(string s);
 	string fromUser;
 	//cin >> fromUser;
 
 	getline(cin,fromUser);
-	cout << "You entered: " << fromUser <<  endl;
-
-	myidentity(fromUser);
-	reverseString(fromUser);
+	cout << "You entered: " << myidentity(fromUser) <<  endl;
+	cout << "Your reversed string: " << reverseString(fromUser) << endl;
+	cout << (isPalindrome(fromUser) ? "Your string is palindrom." : "Your string is not palindrom." )<< endl;
 
 	//while (getchar() != '\n');
 	getchar();
@@ -32,8 +32,13 @@ string reverseString(string s) {
 	string reversedS;
 
 	for (int i = s.size()-1; i >= 0; i--){
-		cout << s[i] << endl;
+		reversedS += s[i];
 	}
 
 	return reversedS;
+}
+
+bool isPalindrome(string s) {
+	return (s == reverseString(s));
+	
 }
