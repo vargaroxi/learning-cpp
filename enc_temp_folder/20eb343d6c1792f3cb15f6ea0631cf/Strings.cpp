@@ -31,7 +31,7 @@ string myidentity(string s) {
 string reverseString(string s) {
 	string reversedS;
 
-	for (int i = s.size()-1; i >= 0; i--){
+	for (int i = 0; i < s.size(); i++) {
 		cout << s[i] << endl;
 	}
 
